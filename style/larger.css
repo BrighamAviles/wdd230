@@ -1,0 +1,15 @@
+@media (min-width: 768px) {
+
+
+    body {
+        font-size: 18px;
+    }
+
+    main {
+        max-width: 960px;
+    }
+
+    .card {
+        padding: 20px;
+    }
+}
