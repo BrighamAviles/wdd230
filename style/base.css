@@ -27,37 +27,94 @@ header h1 {
     margin: 0;
 }
 
+#menu {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    text-decoration: none;
+    padding: .5rem .75rem;
+    background-color: #eee;
+    color: #000;
+}
 
+#menu::before {
 
+    content: "≡";
+}
 
 nav {
-    background-color: #03045E;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
+    background-color: rgb(39, 21, 197);
 }
 
-nav a {
-    color: white;
+.navigation {
+    list-style: none;
+    margin: 0 auto;
+    max-width: 760px;
+}
+
+
+.navigation li {
+    display: none;
+}
+
+.navigation a {
+    display: block;
+    padding: 0.75rem;
+    text-align: left;
     text-decoration: none;
-    margin-right: 10px;
-    margin-bottom: 5px;
-
+    color: white;
+    font-weight: 700;
+    transition: 0.5s;
+    font-size: clamp(1rem, 2vmin, 1.5rem);
 }
 
-@media (min-width: 768px) {
-    nav {
-        flex-direction: row;
+.navigation a:hover,
+navigation a:active {
+    color: white;
+    background-color: black;
+}
 
+.show li {
+    display: block;
+}
+
+#menu.show::before {
+    content: "X";
+}
+
+@media only screen and (min-width: 40em) {
+    .navigation {
+        display: flex;
     }
 
-    nav a {
-        margin-right: 10px;
+    .navigation li {
+        display: block;
+        flex: 1 1 100%;
+    }
 
-        margin-bottom: 0;
+    .navigation a {
+        text-align: center;
+    }
 
+
+    .navigation a::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: white;
+        transition: width 0.3s ease;
+    }
+
+    .navigation a:hover::after {
+        width: 100%;
+    }
+
+
+    #menu {
+        display: none;
     }
 }
 
@@ -79,6 +136,17 @@ main {
 ul {
     list-style-type: none;
     padding: 0;
+}
+
+#map-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+iframe {
+    width: 100%;
+    height: 600px;
+    border: none;
 }
 
 footer {
