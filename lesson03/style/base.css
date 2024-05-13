@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic Styling */
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    background: #3366CC;
+    color: #F4AF1B;
+    padding: 20px 0;
+}
+
+header h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #F4AF1B;
+    text-decoration: none;
+}
