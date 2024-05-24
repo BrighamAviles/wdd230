@@ -10,6 +10,7 @@ document.querySelector('button').addEventListener('click', () => {
     if (favchap !== '') {
         const li = document.createElement('li');
         listItem.textContent = favchap;
+        list.append(li);
 
         const deleteButton = document.createElement('button');
         deleteButton.textContent = '❌';
@@ -21,10 +22,10 @@ document.querySelector('button').addEventListener('click', () => {
         });
 
         document.getElementById('list').appendChild(listItem);
-        favchapInput.value = ''; // Clear the input field
-        message.textContent = ''; // Clear any previous message
+        favchapInput.value = '';
+        message.textContent = '';
     } else {
         message.textContent = 'Please enter a book and chapter.';
     }
-    favchapInput.focus(); // Focus the input field
+    favchapInput.focus();
 });
