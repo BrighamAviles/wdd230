@@ -1,6 +1,6 @@
 const input = document.querySelector('#favchap');
 const button = document.querySelector('button');
-const list = document.querySelector('list'); //fill in the blank to reference the unord
+const list = document.querySelector('ul'); // Reference the unordered list
 
 document.querySelector('button').addEventListener('click', () => {
     const favchapInput = document.getElementById('favchap');
@@ -9,23 +9,22 @@ document.querySelector('button').addEventListener('click', () => {
 
     if (favchap !== '') {
         const li = document.createElement('li');
-        listItem.textContent = favchap;
-        list.append(li);
+        li.textContent = favchap; // Correct reference to li
 
         const deleteButton = document.createElement('button');
         deleteButton.textContent = '❌';
-        listItem.append(deleteButton);
+        li.append(deleteButton); // Append the delete button to li
 
         deleteButton.addEventListener('click', () => {
-            document.getElementById('list').removeChild(listItem);
+            list.removeChild(li); // Correct reference to list
             favchapInput.focus();
         });
 
-        document.getElementById('list').appendChild(listItem);
-        favchapInput.value = '';
-        message.textContent = '';
+        list.appendChild(li); // Append the li element to the list
+        favchapInput.value = ''; // Clear the input field
+        message.textContent = ''; // Clear any previous message
     } else {
         message.textContent = 'Please enter a book and chapter.';
     }
-    favchapInput.focus();
+    favchapInput.focus(); // Focus the input field
 });
