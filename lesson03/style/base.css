@@ -45,3 +45,21 @@ nav ul li a {
     color: #F4AF1B;
     text-decoration: none;
 }
+
+#wireframe {
+    padding: 20px 0;
+    text-align: center;
+}
+
+#wireframe img {
+    max-width: 100%;
+    /* Ensures the image is responsive */
+    height: auto;
+    /* Maintains the aspect ratio */
+    width: 60%;
+    /* Adjusted the width to make the image smaller */
+    border: 1px solid #ccc;
+    /* Optional: Adds a border for better visibility */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Optional: Adds a shadow for better aesthetics */
+}
