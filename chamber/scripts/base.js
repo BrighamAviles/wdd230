@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // Smooth scrolling
+    // Smooth scrolling for navigation links
     document.querySelectorAll('nav ul li a').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
@@ -14,19 +14,21 @@ document.addEventListener('DOMContentLoaded', function () {
     const btn = document.querySelector(".join-button");
     const span = document.querySelector(".close-button");
 
-    btn.onclick = function () {
+    function openModal() {
         modal.style.display = "block";
     }
 
-    span.onclick = function () {
+    function closeModal() {
         modal.style.display = "none";
     }
 
-    window.onclick = function (event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
-        }
-    }
+    btn.addEventListener('click', openModal);
+    span.addEventListener('click', closeModal);
 
-// Toggle weather details
+    window.addEventListener('click', function (event) {
+        if (event.target === modal) {
+            closeModal();
+        }
+    });
+});
 
