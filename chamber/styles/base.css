@@ -141,6 +141,13 @@ nav ul li a:hover {
     max-width: 100%;
 }
 
+.google-map {
+    width: 800px;
+    height: 600px;
+    border: 0;
+}
+
+
 
 footer {
     background-color: #003366;
