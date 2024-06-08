@@ -48,6 +48,11 @@ document.addEventListener('DOMContentLoaded', function () {
         navLinks.classList.toggle("active");
         hamburger.classList.toggle("active");
     });
+
+    // Dark mode toggle functionality
+    const darkModeToggle = document.getElementById('dark-mode-toggle');
+
+    darkModeToggle.addEventListener('change', function () {
+        document.body.classList.toggle('dark-mode');
+    });
 });
-
-

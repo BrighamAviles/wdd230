@@ -1,9 +1,65 @@
+/* Add this to your existing CSS file or a new one */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f0f8ff;
 }
+
+body.dark-mode {
+    background-color: black;
+    color: white;
+}
+
+body.dark-mode header {
+    background-color: #222;
+}
+
+body.dark-mode nav ul li a {
+    color: white;
+}
+
+body.dark-mode nav ul li a:hover {
+    background-color: #555;
+}
+
+body.dark-mode .info,
+body.dark-mode .sponsors,
+body.dark-mode .footer-content,
+body.dark-mode .map-container {
+    background-color: #333;
+    color: white;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .hero {
+    background-color: #444;
+}
+
+body.dark-mode .join-button {
+    background-color: #555;
+    color: white;
+}
+
+body.dark-mode .join-button:hover {
+    background-color: #666;
+}
+
+body.dark-mode .sponsor-card {
+    background-color: #444;
+    color: white;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .modal-content {
+    background-color: #444;
+    color: white;
+}
+
+body.dark-mode .google-map {
+    filter: brightness(0.7);
+}
+
 
 header {
     background-color: #003366;
@@ -84,6 +140,61 @@ nav ul li a:hover {
     .nav-links.active {
         display: flex;
     }
+}
+
+.dark-mode {
+    background-color: black;
+    color: white;
+}
+
+.dark-mode .nav-links a {
+    color: white;
+}
+
+.dark-mode .modal-content {
+    background-color: #333;
+    color: white;
+}
+
+.toggle-switch {
+    position: absolute;
+    top: 10px;
+    right: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.toggle-switch input {
+    display: none;
+}
+
+.toggle-switch label {
+    background-color: #ccc;
+    border-radius: 15px;
+    cursor: pointer;
+    position: relative;
+    width: 40px;
+    height: 20px;
+}
+
+.toggle-switch label::after {
+    content: '';
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    top: 1px;
+    left: 1px;
+    transition: 0.2s;
+}
+
+.toggle-switch input:checked+label {
+    background-color: #333;
+}
+
+.toggle-switch input:checked+label::after {
+    transform: translateX(20px);
 }
 
 .banner {
