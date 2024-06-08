@@ -3,31 +3,42 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f0f8ff;
-    /* Light blue background */
 }
 
 header {
     background-color: #003366;
-    /* Dark blue */
     color: white;
     padding: 10px 0;
 }
 
 .header-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
-.logo img {
-    height: 50px;
+.nav-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
 
-.social-icons a {
-    margin-left: 10px;
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.hamburger.active {
+    transform: rotate(45deg);
 }
 
 nav ul {
@@ -46,10 +57,33 @@ nav ul li a {
     text-decoration: none;
     padding: 10px;
     display: block;
+    text-align: center;
 }
 
 nav ul li a:hover {
     background-color: #00509e;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        background-color: #003366;
+    }
+
+    .nav-links li {
+        margin: 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
 }
 
 .banner {
@@ -78,7 +112,6 @@ nav ul li a:hover {
     left: 50%;
     transform: translateX(-50%);
     background-color: #1e90ff;
-    /* Dodger blue */
     color: white;
     padding: 10px 20px;
     border: none;
@@ -89,7 +122,6 @@ nav ul li a:hover {
 
 .join-button:hover {
     background-color: #4682b4;
-    /* Steel blue */
 }
 
 .info {

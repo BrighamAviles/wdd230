@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // Smooth scrolling for navigation links
+    // Smooth scrolling for nav links
     document.querySelectorAll('nav ul li a').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
@@ -39,6 +39,15 @@ document.addEventListener('DOMContentLoaded', function () {
     visitCount++;
     localStorage.setItem('visitCount', visitCount);
     document.getElementById('visit-count').textContent = visitCount;
+
+    // Hamburger menu functionality
+    const hamburger = document.querySelector(".hamburger");
+    const navLinks = document.querySelector(".nav-links");
+
+    hamburger.addEventListener("click", function () {
+        navLinks.classList.toggle("active");
+        hamburger.classList.toggle("active");
+    });
 });
 
 
