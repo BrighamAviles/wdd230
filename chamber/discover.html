@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Chicago Chamber of Commerce</title>
+    <meta name="description"
+        content="The Chicago Chamber of Commerce is dedicated to supporting local businesses and fostering economic growth in the Chicago area.">
+    <meta name="author" content="Brigham Aviles">
+    <link rel="icon" href="favicon.ico">
+    <meta property="og:title" content="Chicago Chamber of Commerce">
+    <meta property="og:type" content="website">
+    <meta property="og:image"
+        content="https://mggroupchicago.com/wp-content/uploads/2020/08/MG_Group_Chicago_Landmarks-scaled.jpg">
+    <meta property="og:url" content="https://brighamaviles.github.io/wdd230/chamber/index.html">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="stylesheet" href="styles/medium.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <h1>The Chicago Chamber of Commerce</h1>
+        </div>
+        <nav>
+            <div class="nav-container">
+                <button class="hamburger">&#9776;</button>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#discover">Discover</a></li>
+                    <li><a href="#directory">Directory</a></li>
+                    <li><a href="#join">Join</a></li>
+                </ul>
+                <div class="toggle-switch">
+                    <input type="checkbox" id="dark-mode-toggle">
+                    <label for="dark-mode-toggle"></label>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="banner">
+        <img src="images/Chicago.webp" alt="hero-Banner Image of chicago">
+    </div>
+
+    <main id="home">
+        <section class="hero">
+            <img src="hero-image.jpg" alt="Scenic view">
+            <button class="join-button">Join the Chamber</button>
+        </section>
+        <section class="info">
+            <div class="events">
+                <h2>Events</h2>
+                <p><strong>Ribbon Cutting</strong> - The Diamond Shack<br>Join us for the grand opening of The Diamond
+                    Shack, Thursday at 1:00 p.m.<br><a href="#">more info ...</a></p>
+            </div>
+            <div class="weather" id="weather-section">
+                <h2>Weather</h2>
+                <p><strong><span id="temp"></span>°C</strong><br>Partly Cloudy<br>
+                <p> class="weather-details">Humidity: 35%<br>Wind Speed: <span id="wind-speed">10</span>
+                    mph<br>Wind Chill: <span id="wind-chill">N/A</p>
+                </p>
+                <section class="card">
+                    <h3>Information</h3>
+                    <p>Temperature: <input type="number" id="temp" value="0"> °F</p>
+                    <p>Wind Speed: <input type="number" id="windspeed" value="0"> mph</p>
+                    <button onclick="calculateAndDisplayWindChill()">Calculate Wind Chill</button>
+                    <p>Wind Chill: <span id="windchill">N/A</span></p>
+                </section>
+            </div>
+
+
+            <div class="page-visit-counter">
+                <h2>Page Visit Counter</h2>
+                <p>This page has been visited <span id="visit-count">0</span> times.</p>
+            </div>
+
+        </section>
+        <section class="sponsors" id="directory">
+            <div class="sponsor-card">
+                <h3>Thankful Transport</h3>
+                <p>"We get it there for you!"<br>hello@thankfultransport.com<br>+999-9999-9999<br><a
+                        href="#">Website</a></p>
+            </div>
+            <div class="sponsor-card">
+                <h3>Code Primera</h3>
+                <p>After school coding!<br>contact@codeprimera.com<br>+999-9999-9999<br><a href="#">Website</a></p>
+            </div>
+            <div class="sponsor-card">
+                <h3>Build A Treefort</h3>
+                <p>Over 1000 Plans!<br>builda@treefort.com<br>+888-8888-8888<br><a href="#">Website</a></p>
+            </div>
+        </section>
+
+        <div class="map-container">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d190256.1976049422!2d-87.89711005475777!3d41.83361467401434!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880e2c3cd0f4cbed%3A0xafe0a6ad09c0c000!2sChicago%2C%20IL!5e0!3m2!1sen!2sus!4v1715318163878!5m2!1sen!2sus"
+                class="google-map" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+
+    </main>
+    <footer id="join">
+        <div class="footer-content">
+            <p>Chicago Chamber of Commerce<br>10 Rue De La Paix<br>Chicago, Mali 999</p>
+            <p>info@tChicago.org<br>+223 2070-2300<br><a href="#">Location Map</a></p>
+            <p>©2022 Chicago Chamber | Rubia M. Francesco | WDD 230 Project | Last Modification: 10/17/2022 22:12:29</p>
+        </div>
+
+    </footer>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Join the Chamber</h2>
+            <p>Thank you for your interest in joining the Chicago Chamber of Commerce. Please fill out the membership
+                form on our website.</p>
+            <button>Go to Membership Form</button>
+
+            <div class="social-icons">
+                <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+                <a href="#"><img src="linkedin-icon.png" alt="LinkedIn"></a>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts/base.js"></script>
+    <script src="scripts/windchill.js"></script>
+</body>
+
+</html>
