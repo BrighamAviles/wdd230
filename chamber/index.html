@@ -63,7 +63,15 @@
                 <p> class="weather-details">Humidity: 35%<br>Wind Speed: <span id="wind-speed">10</span>
                     mph<br>Wind Chill: <span id="wind-chill">N/A</p>
                 </p>
+                <section class="card">
+                    <h3>Information</h3>
+                    <p>Temperature: <input type="number" id="temp" value="0"> °F</p>
+                    <p>Wind Speed: <input type="number" id="windspeed" value="0"> mph</p>
+                    <button onclick="calculateAndDisplayWindChill()">Calculate Wind Chill</button>
+                    <p>Wind Chill: <span id="windchill">N/A</span></p>
+                </section>
             </div>
+
 
             <div class="page-visit-counter">
                 <h2>Page Visit Counter</h2>
