@@ -94,3 +94,8 @@ calendarCells.forEach(cell => {
 });
 
 
+window.onload = function () {
+    document.getElementById('dateTime').value = Date.now();
+};
+
+

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Chicago Chamber of Commerce</title>
+    <meta name="description"
+        content="The Chicago Chamber of Commerce is dedicated to supporting local businesses and fostering economic growth in the Chicago area.">
+    <meta name="author" content="Brigham Aviles">
+    <link rel="icon" href="favicon.ico">
+    <meta property="og:title" content="Chicago Chamber of Commerce">
+    <meta property="og:type" content="website">
+    <meta property="og:image"
+        content="https://mggroupchicago.com/wp-content/uploads/2020/08/MG_Group_Chicago_Landmarks-scaled.jpg">
+    <meta property="og:url" content="https://brighamaviles.github.io/wdd230/chamber/index.html">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="stylesheet" href="styles/medium.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <h1>The Chicago Chamber of Commerce</h1>
+        </div>
+        <nav>
+            <div class="nav-container">
+                <button class="hamburger">&#9776;</button>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#discover">Discover</a></li>
+                    <li><a href="#directory">Directory</a></li>
+                    <li><a href="#join">Join</a></li>
+                </ul>
+                <div class="toggle-switch">
+                    <input type="checkbox" id="dark-mode-toggle">
+                    <label for="dark-mode-toggle"></label>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="form-container">
+            <form action="thankyou.html" method="get">
+                <label for="firstName">First Name:</label>
+                <input type="text" id="firstName" name="firstName" required>
+
+                <label for="lastName">Last Name:</label>
+                <input type="text" id="lastName" name="lastName" required>
+
+                <label for="position">Title or Position:</label>
+                <input type="text" id="position" name="position" required pattern="[a-zA-Z\s-]{7,}">
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required placeholder="example@example.com">
+
+                <label for="phone">Mobile Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <label for="organization">Business/Organization Name:</label>
+                <input type="text" id="organization" name="organization" required>
+
+                <label for="membership">Membership Level:</label>
+                <select id="membership" name="membership" required>
+                    <option value="NP">NP Membership</option>
+                    <option value="Bronze">Bronze Membership</option>
+                    <option value="Silver">Silver Membership</option>
+                    <option value="Gold">Gold Membership</option>
+                </select>
+
+                <label for="description">Business/Organization Description:</label>
+                <textarea id="description" name="description"></textarea>
+
+                <input type="hidden" id="dateTime" name="dateTime">
+
+                <button type="submit">Submit Form</button>
+            </form>
+        </div>
+        </div>
+        <div class="benefits-container">
+            <h2>Membership Benefits</h2>
+            <div class="membership-level">
+                <h3>NP Membership</h3>
+                <p>No fee</p>
+                <p>Basic benefits</p>
+            </div>
+            <div class="membership-level">
+                <h3>Bronze Membership</h3>
+                <p>Low fee</p>
+                <p>Enhanced benefits</p>
+            </div>
+            <div class="membership-level">
+                <h3>Silver Membership</h3>
+                <p>Medium fee</p>
+                <p>More benefits</p>
+            </div>
+            <div class="membership-level">
+                <h3>Gold Membership</h3>
+                <p>High fee</p>
+                <p>Premium benefits</p>
+            </div>
+    </main>
+
+
+
+    </footer>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Join the Chamber</h2>
+            <p>Thank you for your interest in joining the Chicago Chamber of Commerce. Please fill out the membership
+                form on our website.</p>
+            <button>Go to Membership Form</button>
+
+            <div class="social-icons">
+                <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+                <a href="#"><img src="linkedin-icon.png" alt="LinkedIn"></a>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts/base.js"></script>
+    <script src="scripts/windchill.js"></script>
+</body>
+
+</html>

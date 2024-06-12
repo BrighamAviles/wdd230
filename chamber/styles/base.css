@@ -415,3 +415,73 @@ footer {
     background-color: #ffcccb;
     /* You can change the background color */
 }
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+input[type="submit"],
+button {
+    background-color: #1e90ff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover,
+button:hover {
+    background-color: #4682b4;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-container {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.benefits-container {
+    flex: 1;
+}
+
+.membership-level {
+    margin-bottom: 20px;
+}
+
+.membership-level h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.membership-level p {
+    margin: 5px 0;
+}
