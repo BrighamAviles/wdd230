@@ -128,6 +128,20 @@ main {
     grid-gap: 20px;
 }
 
+.hero {
+    margin: 10px auto;
+    position: relative;
+    border: 1px solid rgba(0, 0, 0, .1);
+    height: 300px;
+}
+
+.herolabel {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    background: radial-gradient(#fff, )
+}
+
 .card {
     background-color: #f0f0f0;
     padding: 10px;
@@ -136,6 +150,8 @@ main {
 ul {
     list-style-type: none;
     padding: 0;
+    position: relative;
+    margin-top: 40vh;
 }
 
 #map-container {
