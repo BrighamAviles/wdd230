@@ -27,7 +27,6 @@
 
 // Function to calculate wind chill
 // Function to calculate wind chill
-// Function to calculate wind chill
 function calculateWindChill(temp, windspeed) {
     if (temp <= 50 && windspeed > 3) {
         let windChill = 35.74 + (0.6215 * temp) - (35.75 * Math.pow(windspeed, 0.16)) + (0.4275 * temp * Math.pow(windspeed, 0.16));
@@ -40,12 +39,12 @@ function calculateWindChill(temp, windspeed) {
 // Function to read input values, calculate wind chill, and display it
 function calculateAndDisplayWindChill() {
     let tempElement = document.getElementById("temp");
-    let windspeedElement = document.getElementById("wind-speed");
-    let windchillElement = document.getElementById("wind-chill");
+    let windspeedElement = document.getElementById("windspeed");
+    let windchillElement = document.getElementById("windchill");
 
     // Get input values
-    let curtemp = parseFloat(tempElement.innerText);
-    let windspeed = parseFloat(windspeedElement.innerText);
+    let curtemp = parseFloat(tempElement.value);
+    let windspeed = parseFloat(windspeedElement.value);
 
     // Calculate wind chill
     let windChill = calculateWindChill(curtemp, windspeed);

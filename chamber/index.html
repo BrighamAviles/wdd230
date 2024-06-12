@@ -57,13 +57,19 @@
                 <p><strong>Ribbon Cutting</strong> - The Diamond Shack<br>Join us for the grand opening of The Diamond
                     Shack, Thursday at 1:00 p.m.<br><a href="#">more info ...</a></p>
             </div>
-            <section class="card">
-                <h3>weather</h3>
-                <p><strong><span id="temp">71</span>°C</strong><br>Partly Cloudy</p>
-                <p class="weather-details">Humidity: 35%<br>Wind Speed: <span id="wind-speed">4</span> mph<br>Wind
-                    Chill: <span id="wind-chill">N/A</span></p>
-                <button onclick="calculateAndDisplayWindChill()">Calculate Wind Chill</button>
-            </section>
+            <div class="weather" id="weather-section">
+                <h2>Weather</h2>
+                <p><strong><span id="temp"></span>°C</strong><br>Partly Cloudy<br>
+                <p> class="weather-details">Humidity: 35%<br>Wind Speed: <span id="wind-speed">10</span>
+                    mph<br>Wind Chill: <span id="wind-chill">N/A</p>
+                </p>
+                <section class="card">
+                    <h3>Information</h3>
+                    <p>Temperature: <input type="number" id="temp" value="0"> °F</p>
+                    <p>Wind Speed: <input type="number" id="windspeed" value="0"> mph</p>
+                    <button onclick="calculateAndDisplayWindChill()">Calculate Wind Chill</button>
+                    <p>Wind Chill: <span id="windchill">N/A</span></p>
+                </section>
             </div>
 
 
