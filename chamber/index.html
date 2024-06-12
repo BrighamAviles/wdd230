@@ -59,9 +59,12 @@
             </div>
             <div class="weather" id="weather-section">
                 <h2>Weather</h2>
-                <p><strong>33°C</strong><br>Partly Cloudy<br><span class="weather-details">Humidity: 35%<br>Wind Chill:
-                        N/A</span></p>
+                <p><strong><span id="temp"></span>°C</strong><br>Partly Cloudy<br>
+                <p> class="weather-details">Humidity: 35%<br>Wind Speed: <span id="wind-speed">10</span>
+                    mph<br>Wind Chill: <span id="wind-chill">N/A</p>
+                </p>
             </div>
+
             <div class="page-visit-counter">
                 <h2>Page Visit Counter</h2>
                 <p>This page has been visited <span id="visit-count">0</span> times.</p>
@@ -116,6 +119,7 @@
     </div>
 
     <script src="scripts/base.js"></script>
+    <script src="scripts/windchill.js"></script>
 </body>
 
 </html>
