@@ -319,3 +319,99 @@ footer {
     background-color: rgba(0, 0, 0, 0.4);
     padding-top: 60px;
 }
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.sidebar {
+    background-color: #f9f9f9;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Hover effect for images */
+.gallery img {
+    width: 100%;
+    transition: transform 0.3s ease;
+}
+
+@media (min-width: 769px) {
+    .gallery img:hover {
+        transform: scale(1.1);
+    }
+}
+
+.sidebar section {
+    margin-bottom: 20px;
+}
+
+.sidebar h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.calendar {
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+.event {
+    margin-bottom: 10px;
+}
+
+.demographics,
+.attractions {
+    font-size: 14px;
+}
+
+/* Calendar Styles */
+.calendar-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.calendar-table th,
+.calendar-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+.calendar-table th {
+    background-color: #f4f4f4;
+}
+
+.events-list {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+.events-list li {
+    list-style-type: none;
+}
+
+/* Add this to your CSS */
+.current-day {
+    background-color: #ffcccb;
+    /* You can change the background color */
+}

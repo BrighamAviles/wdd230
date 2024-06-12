@@ -57,3 +57,40 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
 });
+
+
+// Visit message logic
+const visitMessageElement = document.getElementById('visit-message');
+const lastVisit = localStorage.getItem('lastVisit');
+const currentVisit = Date.now();
+
+if (lastVisit) {
+    const daysBetween = Math.floor((currentVisit - lastVisit) / (1000 * 60 * 60 * 24));
+    if (daysBetween < 1) {
+        visitMessageElement.textContent = "Back so soon! Awesome!";
+    } else if (daysBetween === 1) {
+        visitMessageElement.textContent = "You last visited 1 day ago.";
+    } else {
+        visitMessageElement.textContent = `You last visited ${daysBetween} days ago.`;
+    }
+} else {
+    visitMessageElement.textContent = "Welcome! Let us know if you have any questions.";
+}
+
+localStorage.setItem('lastVisit', currentVisit);
+
+// Highlight current day on the calendar
+const today = new Date();
+const currentDay = today.getDate();
+const daysInMonth = new Date(today.getFullYear(), today.getMonth() + 1, 0).getDate(); // Number of days in current month
+
+const calendarTable = document.querySelector('.calendar-table');
+const calendarCells = calendarTable.querySelectorAll('td');
+
+calendarCells.forEach(cell => {
+    if (cell.textContent === String(currentDay)) {
+        cell.classList.add('current-day');
+    }
+});
+
+
