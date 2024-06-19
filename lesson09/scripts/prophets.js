@@ -15,25 +15,17 @@ async function getProphetData() {
     // Log the data to the console for testing
     console.table(data.prophets);
 
-    // Process the data and create HTML elements (optional)
-    data.prophets.forEach(prophet => {
-        const card = document.createElement('div');
-        card.innerHTML = `
-            <h2>${prophet.name} ${prophet.lastname}</h2>
-            <p>Date of Birth: ${prophet.birthdate}</p>
-            <p>Place of Birth: ${prophet.birthplace}</p>
-        `;
-        cards.appendChild(card);
-    });
+    // Call the function to display the prophets
+    displayProphets(data.prophets);
 }
 
-// Call the function to fetch and process the data
-getProphetData();
-
+// Define the function to display the prophets
 const displayProphets = (prophets) => {
     prophets.forEach((prophet) => {
         // Create elements to add to the div.cards element
         let card = document.createElement('section');
+        card.classList.add('card');
+
         let fullName = document.createElement('h2');
         let portrait = document.createElement('img');
 
@@ -55,3 +47,7 @@ const displayProphets = (prophets) => {
         cards.appendChild(card);
     });
 }
+
+// Call the function to fetch and process the data
+getProphetData();
+
