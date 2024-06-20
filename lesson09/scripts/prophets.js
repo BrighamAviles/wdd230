@@ -50,4 +50,3 @@ const displayProphets = (prophets) => {
 
 // Call the function to fetch and process the data
 getProphetData();
-
