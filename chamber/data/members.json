@@ -1,0 +1,58 @@
+[
+    {
+        "name": "Tech Innovators Inc.",
+        "address": "123 Innovation Drive, Chicago, IL 60601",
+        "phone": "312-555-0101",
+        "website": "http://www.techinnovators.com",
+        "image": "https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "membership_level": "Gold"
+    },
+    {
+        "name": "Green Solutions LLC",
+        "address": "456 Eco Lane, Chicago, IL 60602",
+        "phone": "312-555-0202",
+        "website": "http://www.greensolutions.com",
+        "image": "green_solutions.png",
+        "membership_level": "Silver"
+    },
+    {
+        "name": "Urban Eats Co.",
+        "address": "789 Gourmet Street, Chicago, IL 60603",
+        "phone": "312-555-0303",
+        "website": "http://www.urbaneats.com",
+        "image": "urban_eats.png",
+        "membership_level": "Bronze"
+    },
+    {
+        "name": "NextGen Finance",
+        "address": "101 Money Blvd, Chicago, IL 60604",
+        "phone": "312-555-0404",
+        "website": "http://www.nextgenfinance.com",
+        "image": "nextgen_finance.png",
+        "membership_level": "Gold"
+    },
+    {
+        "name": "HealthWave",
+        "address": "202 Wellness Way, Chicago, IL 60605",
+        "phone": "312-555-0505",
+        "website": "http://www.healthwave.com",
+        "image": "healthwave.png",
+        "membership_level": "Silver"
+    },
+    {
+        "name": "EduFuture",
+        "address": "303 Learning Ave, Chicago, IL 60606",
+        "phone": "312-555-0606",
+        "website": "http://www.edufuture.com",
+        "image": "edufuture.png",
+        "membership_level": "Bronze"
+    },
+    {
+        "name": "StyleHub",
+        "address": "404 Fashion Road, Chicago, IL 60607",
+        "phone": "312-555-0707",
+        "website": "http://www.stylehub.com",
+        "image": "stylehub.png",
+        "membership_level": "Gold"
+    }
+]

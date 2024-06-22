@@ -485,3 +485,74 @@ main {
 .membership-level p {
     margin: 5px 0;
 }
+
+/* Add this to your existing CSS file or a new one */
+
+.directory-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.view-switcher {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.view-switcher button {
+    background-color: #1e90ff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 0 10px;
+}
+
+.view-switcher button:hover {
+    background-color: #4682b4;
+}
+
+.list-view .business-card,
+.grid-view .business-card {
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+}
+
+.list-view .business-card img,
+.grid-view .business-card img {
+    max-width: 100px;
+    margin-right: 20px;
+    border-radius: 5px;
+}
+
+.list-view .business-card div,
+.grid-view .business-card div {
+    flex: 1;
+}
+
+.grid-view {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.grid-view .business-card {
+    width: calc(33.333% - 20px);
+    margin: 10px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.grid-view .business-card img {
+    margin: 0 0 10px 0;
+}
