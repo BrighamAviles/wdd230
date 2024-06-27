@@ -174,3 +174,33 @@ footer {
     padding: 10px;
     text-align: center;
 }
+
+
+.weather-card {
+    max-width: 400px;
+    margin: 20px auto;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.temperature {
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.weather-icon {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.weather-icon img {
+    max-width: 100px;
+}
+
+.weather-description {
+    text-align: center;
+}
