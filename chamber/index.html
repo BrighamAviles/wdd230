@@ -59,16 +59,20 @@
             </div>
             <div class="weather" id="weather-section">
                 <h2>Weather</h2>
-                <p><strong><span id="temp"></span>°C</strong><br>Partly Cloudy<br>
-                <p> class="weather-details">Humidity: 35%<br>Wind Speed: <span id="wind-speed">10</span>
-                    mph<br>Wind Chill: <span id="wind-chill">N/A</p>
-                </p>
+                <div class="weather-card">
+                    <div class="temperature">
+                        <span id="current-temp">Loading...</span>
+                    </div>
+                    <div class="weather-icon">
+                        <img id="weather-icon" src="" alt="Weather Icon">
+                    </div>
+                    <div class="weather-description">
+                        <p id="weather-desc"></p>
+                    </div>
+                </div>
                 <section class="card">
-                    <h3>Information</h3>
-                    <p>Temperature: <input type="number" id="temp" value="0"> °F</p>
-                    <p>Wind Speed: <input type="number" id="windspeed" value="0"> mph</p>
-                    <button onclick="calculateAndDisplayWindChill()">Calculate Wind Chill</button>
-                    <p>Wind Chill: <span id="windchill">N/A</span></p>
+                    <h3>3-Day Forecast</h3>
+                    <div id="forecast"></div>
                 </section>
             </div>
 
@@ -129,6 +133,7 @@
 
     <script src="scripts/base.js"></script>
     <script src="scripts/windchill.js"></script>
+    <script src="scripts/weather.js"></script>
 </body>
 
 </html>
