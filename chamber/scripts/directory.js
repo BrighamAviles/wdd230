@@ -41,3 +41,10 @@ document.addEventListener('DOMContentLoaded', function () {
         })
         .catch(error => console.error('Error fetching data:', error));
 });
+
+// Dark mode toggle functionality
+const darkModeToggle = document.getElementById('dark-mode-toggle');
+
+darkModeToggle.addEventListener('change', function () {
+    document.body.classList.toggle('dark-mode');
+});
