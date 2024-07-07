@@ -4,15 +4,13 @@ body {
     padding: 0;
     background-color: #f0f8ff;
     color: #333;
-    /* Default text color */
     transition: background-color 0.3s, color 0.3s;
 }
 
 /* Dark mode styles */
 body.dark-mode {
-    background-color: black;
-    color: black;
-    /* Ensure text color is black in dark mode */
+    background-color: #111;
+    color: #f0f8ff;
 }
 
 body.dark-mode header,
@@ -23,14 +21,12 @@ body.dark-mode footer,
 body.dark-mode .map-container,
 body.dark-mode .modal-content {
     background-color: #222;
-    color: black;
-    /* Ensure text color is black in dark mode */
+    color: #f0f8ff;
 }
 
 /* Ensure links are visible in dark mode */
 body.dark-mode a {
-    color: black;
-    /* Ensure links are black in dark mode */
+    color: #1e90ff;
 }
 
 /* Header styles */
@@ -42,7 +38,7 @@ header {
 
 .header-container {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
@@ -96,7 +92,7 @@ nav ul li a:hover {
 
 /* Dark mode for navigation */
 body.dark-mode nav ul li a {
-    color: black;
+    color: #f0f8ff;
 }
 
 /* Media queries for responsive design */
@@ -324,7 +320,7 @@ footer {
 
 .dark-mode .modal-content {
     background-color: #444;
-    color: black;
+    color: #f0f8ff;
 }
 
 @media (max-width: 768px) {
