@@ -581,45 +581,63 @@ main {
 
 
 /* Global styles */
+/* General body styles */
+/* General body styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f0f8ff;
+    transition: background-color 0.3s, color 0.3s;
 }
 
+/* Dark mode styles */
 body.dark-mode {
     background-color: black;
-    color: white;
+    color: black;
+    /* Ensure text color is black in dark mode */
 }
 
-header,
-.header-container,
-.nav-container,
-.banner,
-.hero,
-.info,
-.sponsors,
-.map-container,
-footer,
-.footer-content,
-.modal {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+body.dark-mode header,
+body.dark-mode nav,
+body.dark-mode .info,
+body.dark-mode .sponsors,
+body.dark-mode footer,
+body.dark-mode .map-container,
+body.dark-mode .modal-content {
+    background-color: #222;
+    color: black;
+    /* Ensure text color is black in dark mode */
 }
 
+/* Ensure links are visible in dark mode */
+body.dark-mode a {
+    color: black;
+    /* Ensure links are black in dark mode */
+}
+
+/* Header styles */
 header {
     background-color: #003366;
     color: white;
     padding: 10px 0;
 }
 
-.nav-container,
 .header-container {
     display: flex;
     justify-content: center;
     align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Navigation styles */
+.nav-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
 
 .hamburger {
@@ -657,6 +675,34 @@ nav ul li a {
 
 nav ul li a:hover {
     background-color: #00509e;
+}
+
+/* Dark mode for navigation */
+body.dark-mode nav ul li a {
+    color: black;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        background-color: #003366;
+    }
+
+    .nav-links li {
+        margin: 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
 }
 
 .toggle-switch {
@@ -700,14 +746,24 @@ nav ul li a:hover {
     transform: translateX(20px);
 }
 
+/* Banner styles */
+.banner {
+    text-align: center;
+    margin-top: 0px;
+}
+
 .banner img {
     max-width: 100%;
     height: auto;
 }
 
+/* Hero section styles */
 .hero {
     position: relative;
     text-align: center;
+    padding: 20px;
+    background-color: #e6f2ff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .hero img {
@@ -733,34 +789,87 @@ nav ul li a:hover {
     background-color: #4682b4;
 }
 
-.info,
-.sponsors {
-    display: flex;
-    justify-content: space-around;
+/* Section styles */
+section {
     padding: 20px;
+    margin: 20px 0;
     background-color: white;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Info section styles */
+.info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.info>div {
+    flex: 1;
+    margin: 10px;
+    background-color: #e6f2ff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Weather section styles */
+.weather-card {
+    max-width: 400px;
+    margin: 20px auto;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Sponsors section styles */
+.sponsors {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .sponsor-card {
     background-color: white;
     padding: 20px;
+    margin: 10px;
+    flex: 1;
     text-align: center;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Map container styles */
+.map-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
 .map-container iframe {
-    width: 100%;
+    max-width: 100%;
+}
+
+.google-map {
+    width: 800px;
     height: 600px;
     border: 0;
 }
 
+/* Footer styles */
 footer {
     background-color: #003366;
     color: white;
+    padding: 20px 0;
     text-align: center;
 }
 
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Modal styles */
 .modal {
     display: none;
     position: fixed;
@@ -774,116 +883,35 @@ footer {
     padding-top: 60px;
 }
 
-@media (max-width: 768px) {
-    .hamburger {
-        display: block;
-    }
-
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        text-align: center;
-        background-color: #003366;
-    }
-
-    .nav-links li {
-        margin: 0;
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
-
-    .grid-container {
-        grid-template-columns: 1fr;
-    }
-}
-
-@media (min-width: 769px) {
-    .gallery img:hover {
-        transform: scale(1.1);
-    }
-}
-
-.directory-container,
-.weather-card {
-    background-color: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.directory-container {
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
     padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
 }
 
-.view-switcher {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
+.modal .close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
 }
 
-.view-switcher button {
-    background-color: #1e90ff;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
+.modal .close-button:hover,
+.modal .close-button:focus {
+    color: black;
+    text-decoration: none;
     cursor: pointer;
-    font-size: 16px;
-    margin: 0 10px;
 }
 
-.view-switcher button:hover {
-    background-color: #4682b4;
+.dark-mode .modal-content {
+    background-color: #444;
+    color: black;
 }
 
-.list-view .business-card,
-.grid-view .business-card {
-    background-color: #f9f9f9;
-    padding: 20px;
-    margin: 10px 0;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    display: flex;
-    align-items: center;
-}
-
-.list-view .business-card img,
-.grid-view .business-card img {
-    max-width: 100px;
-    margin-right: 20px;
-    border-radius: 5px;
-}
-
-.grid-view {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.grid-view .business-card {
-    width: calc(33.333% - 20px);
-    margin: 10px;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-
-.grid-view .business-card img {
-    margin: 0 0 10px 0;
-}
-
-.weather-card {
-    max-width: 400px;
-    margin: 20px auto;
-    padding: 20px;
-}
-
-.temperature,
-.weather-icon,
-.weather-description {
-    text-align: center;
-}
-
-.weather-icon img {
-    max-width: 100px;
+@media (max-width: 768px) {
+    .info {
+        flex-direction: column;
+    }
 }

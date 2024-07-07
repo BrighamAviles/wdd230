@@ -30,9 +30,8 @@
                 <button class="hamburger">&#9776;</button>
                 <ul class="nav-links">
                     <li><a href="#home">Home</a></li>
-                    <li><a href="#discover">Discover</a></li>
-                    <li><a href="#directory">Directory</a></li>
-                    <li><a href="join.html">Join</a></li>
+                    <li><a href="/chamber/discover.html">Discover</a></li>
+                    <li><a href="/chamber/directory.html">Directory</a></li>
                 </ul>
                 <div class="toggle-switch">
                     <input type="checkbox" id="dark-mode-toggle">
@@ -48,7 +47,6 @@
 
     <main id="home">
         <section class="hero">
-            <img src="hero-image.jpg" alt="Scenic view">
             <button class="join-button">Join the Chamber</button>
         </section>
         <section class="info">
@@ -56,7 +54,25 @@
                 <h2>Events</h2>
                 <p><strong>Ribbon Cutting</strong> - The Diamond Shack<br>Join us for the grand opening of The Diamond
                     Shack, Thursday at 1:00 p.m.<br><a href="#">more info ...</a></p>
+                <p><strong>Community Picnic</strong> - Central Park<br>Enjoy a fun-filled day with food, games, and
+                    music, Saturday at 12:00 p.m.<br><a href="#">more info ...</a></p>
+                <p><strong>Art Exhibition</strong> - Downtown Art Gallery<br>Explore the latest works from local
+                    artists, Friday at 6:00 p.m.<br><a href="#">more info ...</a></p>
+                <p><strong>Charity Run</strong> - Riverside Trail<br>Participate in our annual charity run to support
+                    local shelters, Sunday at 8:00 a.m.<br><a href="#">more info ...</a></p>
+                <p><strong>Farmers Market</strong> - City Square<br>Fresh produce and handmade goods available every
+                    Wednesday at 9:00 a.m.<br><a href="#">more info ...</a></p>
+                <p><strong>Cooking Class</strong> - Community Center<br>Learn to cook delicious meals with our expert
+                    chefs, Monday at 5:00 p.m.<br><a href="#">more info ...</a></p>
+
+                <ul class="list">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="/chamber/discover.html">Discover</a></li>
+                    <li><a href="/chamber/directory.html">Directory</a></li>
+                </ul>
             </div>
+
+
             <div class="weather" id="weather-section">
                 <h2>Weather</h2>
                 <div class="weather-card">
@@ -75,36 +91,25 @@
                     <div id="forecast"></div>
                 </section>
             </div>
-
-
             <div class="page-visit-counter">
                 <h2>Page Visit Counter</h2>
                 <p>This page has been visited <span id="visit-count">0</span> times.</p>
             </div>
-
         </section>
+
+
         <section class="sponsors" id="directory">
             <div class="sponsor-card">
                 <h3>Thankful Transport</h3>
-                <p>"We get it there for you!"<br>hello@thankfultransport.com<br>+999-9999-9999<br><a
-                        href="#">Website</a></p>
-            </div>
-            <div class="sponsor-card">
-                <h3>Code Primera</h3>
-                <p>After school coding!<br>contact@codeprimera.com<br>+999-9999-9999<br><a href="#">Website</a></p>
-            </div>
-            <div class="sponsor-card">
-                <h3>Build A Treefort</h3>
-                <p>Over 1000 Plans!<br>builda@treefort.com<br>+888-8888-8888<br><a href="#">Website</a></p>
-            </div>
-        </section>
+                <p>"We get it
 
-        <div class="map-container">
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d190256.1976049422!2d-87.89711005475777!3d41.83361467401434!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880e2c3cd0f4cbed%3A0xafe0a6ad09c0c000!2sChicago%2C%20IL!5e0!3m2!1sen!2sus!4v1715318163878!5m2!1sen!2sus"
-                class="google-map" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
-        </div>
+
+                <div class="map-container">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d190256.1976049422!2d-87.89711005475777!3d41.83361467401434!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880e2c3cd0f4cbed%3A0xafe0a6ad09c0c000!2sChicago%2C%20IL!5e0!3m2!1sen!2sus!4v1715318163878!5m2!1sen!2sus"
+                        class="google-map" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
 
     </main>
     <footer id="join">
@@ -124,10 +129,6 @@
             <button onclick="window.location.href='join.html'">Go to Membership Form</button>
 
 
-            <div class="social-icons">
-                <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
-                <a href="#"><img src="linkedin-icon.png" alt="LinkedIn"></a>
-            </div>
         </div>
     </div>
 
