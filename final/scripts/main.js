@@ -1,4 +1,4 @@
-// All my scripts goes here very important
+
 
 const apiKey =
     "https://api.openweathermap.org/data/2.5/weather?id=3719028&units=metric&appid=38df4f6d3027269d8c24e32b31035019";
@@ -7,7 +7,7 @@ const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?id=3719028&u
 
 const oneDayForecastUrl = `https://api.openweathermap.org/data/2.5/forecast?id=3719028&units=metric&appid=38df4f6d3027269d8c24e32b31035019`;
 
-// This is my Fetch current weather data very important
+
 fetch(weatherUrl)
     .then((response) => response.json())
     .then((data) => {
@@ -23,7 +23,7 @@ fetch(weatherUrl)
     })
     .catch((error) => console.error("Error fetching current weather:", error));
 
-// Here also is my Fetch one day forecast really nice
+
 fetch(oneDayForecastUrl)
     .then((response) => response.json())
     .then((data) => {
@@ -34,8 +34,8 @@ fetch(oneDayForecastUrl)
     })
     .catch((error) => console.error("Error fetching one day forecast:", error));
 
-// This part is my js code for rental page very important
-const directoryURL = "https://raw.githubusercontent.com/celestindev/scoots/main/data/rentals.json";
+
+const directoryURL = "https://raw.githubusercontent.com//BrighamAviles/wdd230/main/final/data/rentals.json";
 
 fetch(directoryURL)
     .then((response) => response.json())
@@ -76,8 +76,11 @@ function displayRentals(rentals) {
     });
 }
 
-// This my code for current date very important
+
 
 var footer = document.getElementById("footer_date");
 var currentDate = new Date();
 footer.innerHTML = currentDate.toLocaleString();
+
+
+// https://raw.githubusercontent.com/celestindev/scoots/main/data/rentals.json
