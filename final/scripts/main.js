@@ -76,12 +76,6 @@ function displayRentals(rentals) {
     });
 }
 
-function toggleMenu() {
-    const navLinks = document.getElementById('nav-links');
-    navLinks.classList.toggle('show');
-}
-
-
 
 var footer = document.getElementById("footer_date");
 var currentDate = new Date();
